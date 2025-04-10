@@ -89,8 +89,32 @@ private func somePrivateMethod() {
 
 ``` Swift
 private let titleLabel = UILabel()
+private let iconImageView = UIImageView()
 
-private func configureLabel() {
+func setupUI() {
+    addSubviews()
+    setupConstraints()
+    setupLabel()
+    setupIconImage()
+}
+
+func addSubviews() {
+    addSubview(titleLabel)
+    addSubview(iconImageView)
+}
+
+func setupConstraints() {
+    titleLabel.snp.makeConstraints {
+        ...
+    }
+    
+    iconImageView.snp.makeConstraints {
+        ...
+    }
+}
+
+
+private func setupLabel() {
     titleLabel.text = "..."
     titleLabel.font = .systemFont(ofSize: 10)
     titleLabel.adjustsFontSizeToFitWidth = true
@@ -98,13 +122,8 @@ private func configureLabel() {
     ...
 }
 
-private func setupLabel() {
-    configureLabel()
-    
-    addSubview(titleLabel)
-    titleLabel.snp.makeConstraints {
-        ...
-    }
+private func setupIconImage() {
+    iconImageView.image = ...
 }
 ```
 
