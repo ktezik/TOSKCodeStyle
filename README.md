@@ -129,6 +129,39 @@ private func setupIconImage() {
 }
 ```
 
+Настройка для отслеживания максимальной ширины для кода:
+
+____Xcode -> Settings... -> Text Editing -> Editing -> Reformat code at column - 120____
+
+Пример переноса если код выходит за 120 символов:
+
+``` Swift
+guard
+    let propertie,
+    let value,
+    let text
+else {
+    return
+}
+
+init(
+    text: String,
+    image: UIImage?,
+    value: CGFloat
+) {
+    ...
+}
+```
+
+Required init 
+
+``` Swift
+@available(*, unavailable)
+required init?(coder: NSCoder) {
+    assertionFailure("init(coder:) has not been implemented")
+    return nil
+}
+```
 
 
 
