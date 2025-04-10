@@ -157,10 +157,7 @@ Required init
 
 ``` Swift
 @available(*, unavailable)
-required init?(coder: NSCoder) {
-    assertionFailure("init(coder:) has not been implemented")
-    return nil
-}
+required init?(coder: NSCoder) { nil }
 ```
 
 
