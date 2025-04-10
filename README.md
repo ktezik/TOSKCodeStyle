@@ -85,9 +85,11 @@ private func somePrivateMethod() {
 }
 ```
 
-Пример инициализации UI элемента:
+Пример работы с UI:
 
 ``` Swift
+import SnapKit
+
 private let titleLabel = UILabel()
 private let iconImageView = UIImageView()
 
